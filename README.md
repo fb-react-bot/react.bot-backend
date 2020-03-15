@@ -1,6 +1,6 @@
 # react.bot-backend?
-* this repository is for our react.bot backend! 
-* it consists of two servers. One is for communicating with the client in real-time and the other is for inferencing user's voice.
+* This repository is for our react.bot backend! 
+* It consists of two servers. One is for communicating with the client in real-time and the other is for inferencing user's voice.
 
 # How to start this..
 * Deploying a model API first and a socket server.
