@@ -1,17 +1,29 @@
 version: '3.5'
 services:
-  react_bot_backend_svc_8080:
-    container_name: react-bot-backend-container_8080
+  react_bot_model_svc:
+    container_name: react-bot-model-container
     build:
+      context: ./model-backend
+      dockerfile: Dockerfile
+    restart: always
+    stdin_open: true
+    tty: true
+    image: fb-back-for-model:latest
+    ports: 
+      - "8000:8000"
+    command: python /server.py
+    
+  react_bot_backend_svc:
+    container_name: react-bot-backend-container
+    build:
+      depends_on: react_bot_model_svc
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - /Users/lim/Downloads/Projects/facebook-hackerthon/react.bot-backend/wav_files:/wav_files
     working_dir: /
+    restart: always
     stdin_open: true
     tty: true
     image: fb-back:latest
     ports: 
       - "80:8080"
-    command: gunicorn web:app --bind 0.0.0.0:8080 --worker-class aiohttp.worker.GunicornWebWorker --reload 
-
+    command: gunicorn --worker-class eventlet -w 1 --bind 0.0.0.0:8080 web:app
