@@ -1,0 +1,11 @@
+aiohttp
+python-engineio[asyncio_client]
+wave
+scipy
+numpy
+librosa
+webrtcvad
+SpeechRecognition
+requests
+gunicorn
+eventlet

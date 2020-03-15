@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  react_bot_model_svc:
+    container_name: react-bot-model-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    image: fb-back-for-model:latest
+    ports: 
+      - "8000:8000"
+    command: python /server.py
+
