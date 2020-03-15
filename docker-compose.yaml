@@ -11,12 +11,11 @@ services:
     image: fb-back-for-model:latest
     ports: 
       - "8000:8000"
-    command: gunicorn -w 1 --bind 0.0.0.0:8000 web:app
+    command: gunicorn -w 1 --bind 0.0.0.0:8000 server:app
     
   react_bot_backend_svc:
     container_name: react-bot-backend-container
     build:
-      depends_on: react_bot_model_svc
       context: .
       dockerfile: Dockerfile
     working_dir: /
@@ -26,4 +25,4 @@ services:
     image: fb-back:latest
     ports: 
       - "80:8080"
-    command: gunicorn --worker-class eventlet -w 1 --bind 0.0.0.0:8080 web:app
+    command: python web.py

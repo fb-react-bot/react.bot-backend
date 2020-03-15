@@ -1,3 +1,5 @@
 numpy
 wave
 gunicorn
+flask
+librosa

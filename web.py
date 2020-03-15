@@ -54,4 +54,4 @@ async def print_message(sid, *data):
     redis[sid]['result'].extend(list(data))
 
 if __name__ == '__main__':
-    web.run_app(app)
+    web.run_app(app, port = 8080)
