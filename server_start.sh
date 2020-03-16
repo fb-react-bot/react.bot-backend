@@ -1,18 +1,5 @@
 #!/bin/sh
 
-# change locale
-echo "Start installing language!"
-apt-get install -y language-pack-ko
-locale-gen ko_KR.UTF-8
-echo "LC_ALL=ko_KR.utf8" > /etc/default/locale
-
-# change timezone
-timedatectl set-timezone Asia/Seoul
-
-
-# restart ssh
-systemctl restart sshd
-
 
 # update docker-repository 
 sudo apt-get -y update \
