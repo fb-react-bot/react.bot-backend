@@ -38,7 +38,7 @@ async def start_message(sid, data):
         if len(redis[sid]['result']) > 0:
             t1 = time.time()
             headers = {'Content-Type': 'application/json', 'Accept':'application/json'}
-            result = requests.post("http://35.221.251.166:8000/predict",\
+            result = requests.post( HOST_URL + "/predict",\
                 data=json.dumps({'data':redis[sid]['result']}), headers=headers)
             dt = time.time() - t1
             print("Sentiment Analysis time: %0.02f seconds" % (dt))
