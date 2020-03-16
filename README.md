@@ -3,13 +3,19 @@
 * It consists of two servers. One is for communicating with the client in real-time and the other is for inferencing user's voice.
 
 # How to start this..
-Now it will be working on a cloud server(http://35.221.251.166:80) until this week if you want to build this on your own, follow the below. 
+Now it will be running on a cloud server(http://35.221.251.166:80) on socket.io until this week if you want to build this on your own, follow the below. 
 
-1) Edit settings.py: 
+1) (Skip if you have,) If you don't have Docker and Docker-compose on your machine: this command will install them. 
+(* this is only work for Linux Ubuntu 18.04)
+```
+. start.sh
+```
+
+2) Edit settings.py: 
 ```
 HOST_URL = {your IP address}
 ```
-2) Deploying a model API first and a socket server in a same host.
+3) Deploying a model API first and a socket server in a same host.
 * the file "docker-compose.yaml" has configurations for two services: react_bot_backend_svc and react_bot_model_svc
 * "docer-compose up" will build up all of the services. 
 
