@@ -1,3 +1,5 @@
+#
+HOST_URL = "http://35.221.251.166:8000"
 # global
 TMP_DIR = '/wav_files'
 redis = {}
