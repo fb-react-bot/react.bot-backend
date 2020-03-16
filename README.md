@@ -5,7 +5,7 @@
 # How to start this..
 Now it will be running on a cloud server(http://35.221.251.166:80) on socket.io until this week if you want to build this on your own, follow the below. 
 
-1) (Skip if you have,) If you don't have Docker and Docker-compose on your machine: this command will install them. 
+1) (Optional) If you don't have Docker and Docker-compose on your machine: this command will install them. 
 (* this is only work for Linux Ubuntu 18.04)
 ```
 . start.sh
