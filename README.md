@@ -7,7 +7,7 @@ Now it will be working on a cloud server(http://35.221.251.166:80) until this we
 
 1) Edit settings.py: 
 ```
-HOST_URL = {your IP address for a model API}
+HOST_URL = {your IP address}
 ```
 2) Deploying a model API first and a socket server in a same host.
 * the file "docker-compose.yaml" has configurations for two services: react_bot_backend_svc and react_bot_model_svc
