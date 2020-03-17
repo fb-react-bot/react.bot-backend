@@ -3,7 +3,6 @@
 * It consists of two servers. One is for communicating with the client in real-time and the other is for inferencing user's voice.
 
 # How to start this..
-Now it will be running on a cloud server(http://35.221.251.166:80) on socket.io until this week if you want to build this on your own, follow the below. 
 
 1) (Optional) Install Docker and Docker-compose and run them up. 
 * If you don't have Docker and Docker-compose on your machine: this shell script will install them. 
