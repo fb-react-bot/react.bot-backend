@@ -4,24 +4,28 @@
 
 # How to start this..
 
-1) (Optional) Install Docker and Docker-compose and run them up. 
+1) Clone this repository! 
+```
+git clone https://github.com/fb-react-bot/react.bot-backend.git 
+cd react.bot-backend
+```
+
+2) (Optional) Install Docker and Docker-compose and run them up. 
 * If you don't have Docker and Docker-compose on your machine: this shell script will install them. 
-* this script is only for OS Linux Ubuntu 18.04
+* this script is tesed only on OS Linux Ubuntu 18.04
 ```
 . start.sh
 ```
 
-2) Edit settings.py: 
+3) Edit settings.py: 
 ```
-HOST_URL = {your IP address}
+HOST_URL = "http://{your IP address}"
 ```
-3) Deploying a model API first and a socket server in a same host.
+4) Deploying a model API first and a socket server in a same host.
 * the file "docker-compose.yaml" has configurations for two services: react_bot_backend_svc and react_bot_model_svc
 * "docer-compose up" will build up all of the services. 
 
 ```bash
-git clone https://github.com/fb-react-bot/react.bot-backend.git 
-cd react.bot-backend
 docker-compose up --build -d
 ``` 
 
