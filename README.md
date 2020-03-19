@@ -12,7 +12,7 @@ cd react.bot-backend
 
 2) (Optional) Install Docker and Docker-compose and run them up. 
 * If you don't have Docker and Docker-compose on your machine: this shell script will install them. 
-* this script is tesed only on OS Linux Ubuntu 18.04
+* this script is only for Ubuntu OS (tesed only on Linux Ubuntu 18.04 LTS)
 ```
 . start.sh
 ```
